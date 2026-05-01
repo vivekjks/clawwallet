@@ -14,6 +14,9 @@ const { addLaunch, listLaunches, getLaunch, setLauncherWallet } = require('./lau
 const { spawn } = require('node:child_process');
 
 const VERSION = 'v1.4';
+const HELP_TIPS = [
+  'Run "node cli.js check" first to validate RPC and connectivity.',
+];
 
 function parseArgv(argv) {
   const positionals = [];
@@ -64,6 +67,11 @@ function usage() {
   console.log('  launchermap list|get|set|add ...');
   console.log('  bitrefill [oauth|api] ... (proxy to ./bitrefill/oauthcli.js or ./bitrefill/apicli.js)');
   console.log('  check');
+  console.log('');
+  console.log('Quick tips:');
+  HELP_TIPS.forEach((tip, index) => {
+    console.log(`  ${index + 1}. ${tip}`);
+  });
 }
 
 function requireFlag(flags, name, usageText) {

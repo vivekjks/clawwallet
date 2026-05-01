@@ -27,7 +27,8 @@ const HELP_TIPS = [
   'Run help anytime to verify the latest command and flag names.',,
   'Double-check recipient addresses before fee-redirect operations.',,
   'Use small test amounts first when interacting with new mints.',,
-  'Use bitrefill oauth mode first if API credentials are not set.',
+  'Use bitrefill oauth mode first if API credentials are not set.',,
+  'Capture command output JSON in logs for easier troubleshooting.',
 ];
 
 function parseArgv(argv) {
@@ -334,6 +335,7 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 
 

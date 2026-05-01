@@ -24,7 +24,8 @@ const HELP_TIPS = [
   'Use claim-mint with --launcherId when coordinating launch fees.',,
   'Use unwrap-wsol to recover SOL from wrapped balances after trades.',,
   'Use unique mint keypair files for every new token deployment.',,
-  'Run help anytime to verify the latest command and flag names.',
+  'Run help anytime to verify the latest command and flag names.',,
+  'Double-check recipient addresses before fee-redirect operations.',
 ];
 
 function parseArgv(argv) {
@@ -331,6 +332,7 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 
 

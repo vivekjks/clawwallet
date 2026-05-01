@@ -14,6 +14,22 @@ const { addLaunch, listLaunches, getLaunch, setLauncherWallet } = require('./lau
 const { spawn } = require('node:child_process');
 
 const VERSION = 'v1.4';
+const HELP_TIPS = [
+  'Run "node cli.js check" first to validate RPC and connectivity.',,
+  'Use --simulate on deploy and claim flows for safe dry runs.',,
+  'Keep wallet key files outside synced folders for better security hygiene.',,
+  'Use launchermap add to persist launcher to wallet mappings.',,
+  'Prefer explicit --slippageBps values during volatile market conditions.',,
+  'Store RPC_URL in your shell profile to avoid manual re-entry.',,
+  'Use claim-mint with --launcherId when coordinating launch fees.',,
+  'Use unwrap-wsol to recover SOL from wrapped balances after trades.',,
+  'Use unique mint keypair files for every new token deployment.',,
+  'Run help anytime to verify the latest command and flag names.',,
+  'Double-check recipient addresses before fee-redirect operations.',,
+  'Use small test amounts first when interacting with new mints.',,
+  'Use bitrefill oauth mode first if API credentials are not set.',,
+  'Capture command output JSON in logs for easier troubleshooting.',
+];
 
 function parseArgv(argv) {
   const positionals = [];
@@ -48,6 +64,8 @@ function parseArgv(argv) {
 }
 
 function usage() {
+  console.log(`Clawwallet CLI ${VERSION}`);
+  console.log('');
   console.log('Usage: node cli.js <command> [flags]');
   console.log('');
   console.log('Migrated commands:');
@@ -62,6 +80,11 @@ function usage() {
   console.log('  launchermap list|get|set|add ...');
   console.log('  bitrefill [oauth|api] ... (proxy to ./bitrefill/oauthcli.js or ./bitrefill/apicli.js)');
   console.log('  check');
+  console.log('');
+  console.log('Quick tips:');
+  HELP_TIPS.forEach((tip, index) => {
+    console.log(`  ${index + 1}. ${tip}`);
+  });
 }
 
 function requireFlag(flags, name, usageText) {
@@ -312,3 +335,16 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

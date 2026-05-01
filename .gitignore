@@ -1,0 +1,21 @@
+# local wallet/key data
+wallets/
+
+# dependencies
+node_modules/
+
+# environment variables / local config
+.env
+.env.*
+config.json
+
+# local archives / scratch
+.trash/
+
+# logs
+*.log
+logs.txt
+
+# OS files
+.DS_Store
+Thumbs.db

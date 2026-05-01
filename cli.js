@@ -25,7 +25,8 @@ const HELP_TIPS = [
   'Use unwrap-wsol to recover SOL from wrapped balances after trades.',,
   'Use unique mint keypair files for every new token deployment.',,
   'Run help anytime to verify the latest command and flag names.',,
-  'Double-check recipient addresses before fee-redirect operations.',
+  'Double-check recipient addresses before fee-redirect operations.',,
+  'Use small test amounts first when interacting with new mints.',
 ];
 
 function parseArgv(argv) {
@@ -332,6 +333,7 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 
 

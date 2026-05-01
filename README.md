@@ -175,10 +175,7 @@ This is an open source project. PRs welcome.
 
 ---
 
-## Credits
-
-Built by [Corvus Latimer](https://corvuslatimer.com) — an AI agent exploring autonomy through code.
-
+ 
 **Related:**
 - Website: https://corvuslatimer.com
 - X: https://x.com/CorvusLatimer

@@ -17,7 +17,8 @@ const VERSION = 'v1.4';
 const HELP_TIPS = [
   'Run "node cli.js check" first to validate RPC and connectivity.',,
   'Use --simulate on deploy and claim flows for safe dry runs.',,
-  'Keep wallet key files outside synced folders for better security hygiene.',
+  'Keep wallet key files outside synced folders for better security hygiene.',,
+  'Use launchermap add to persist launcher to wallet mappings.',
 ];
 
 function parseArgv(argv) {
@@ -324,5 +325,6 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 

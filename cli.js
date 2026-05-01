@@ -21,7 +21,8 @@ const HELP_TIPS = [
   'Use launchermap add to persist launcher to wallet mappings.',,
   'Prefer explicit --slippageBps values during volatile market conditions.',,
   'Store RPC_URL in your shell profile to avoid manual re-entry.',,
-  'Use claim-mint with --launcherId when coordinating launch fees.',
+  'Use claim-mint with --launcherId when coordinating launch fees.',,
+  'Use unwrap-wsol to recover SOL from wrapped balances after trades.',
 ];
 
 function parseArgv(argv) {
@@ -328,6 +329,7 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 
 

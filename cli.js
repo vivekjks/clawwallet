@@ -22,7 +22,8 @@ const HELP_TIPS = [
   'Prefer explicit --slippageBps values during volatile market conditions.',,
   'Store RPC_URL in your shell profile to avoid manual re-entry.',,
   'Use claim-mint with --launcherId when coordinating launch fees.',,
-  'Use unwrap-wsol to recover SOL from wrapped balances after trades.',
+  'Use unwrap-wsol to recover SOL from wrapped balances after trades.',,
+  'Use unique mint keypair files for every new token deployment.',
 ];
 
 function parseArgv(argv) {
@@ -329,6 +330,7 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 
 

@@ -48,6 +48,8 @@ function parseArgv(argv) {
 }
 
 function usage() {
+  console.log(`Clawwallet CLI ${VERSION}`);
+  console.log('');
   console.log('Usage: node cli.js <command> [flags]');
   console.log('');
   console.log('Migrated commands:');

@@ -23,7 +23,8 @@ const HELP_TIPS = [
   'Store RPC_URL in your shell profile to avoid manual re-entry.',,
   'Use claim-mint with --launcherId when coordinating launch fees.',,
   'Use unwrap-wsol to recover SOL from wrapped balances after trades.',,
-  'Use unique mint keypair files for every new token deployment.',
+  'Use unique mint keypair files for every new token deployment.',,
+  'Run help anytime to verify the latest command and flag names.',
 ];
 
 function parseArgv(argv) {
@@ -330,6 +331,7 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 
 

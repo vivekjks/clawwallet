@@ -20,7 +20,8 @@ const HELP_TIPS = [
   'Keep wallet key files outside synced folders for better security hygiene.',,
   'Use launchermap add to persist launcher to wallet mappings.',,
   'Prefer explicit --slippageBps values during volatile market conditions.',,
-  'Store RPC_URL in your shell profile to avoid manual re-entry.',
+  'Store RPC_URL in your shell profile to avoid manual re-entry.',,
+  'Use claim-mint with --launcherId when coordinating launch fees.',
 ];
 
 function parseArgv(argv) {
@@ -327,6 +328,7 @@ main().catch((e) => {
   console.error(e.message || e);
   process.exit(1);
 });
+
 
 
 
